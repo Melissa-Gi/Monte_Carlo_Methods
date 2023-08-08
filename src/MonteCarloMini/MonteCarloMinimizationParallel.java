@@ -49,7 +49,7 @@ class MonteCarloMinimizationParallel
     	ymin = Double.parseDouble(args[4] );
     	ymax = Double.parseDouble(args[5] );
     	searches_density = Double.parseDouble(args[6] );
-  
+  dd
     	if(DEBUG) {
     		/* Print arguments */
     		System.out.printf("Arguments, Rows: %d, Columns: %d\n", rows, columns);
