@@ -3,7 +3,7 @@ package MonteCarloMini;
 import java.util.Random;
 import java.util.concurrent.ForkJoinPool; 
 import java.util.concurrent.RecursiveTask;
-s
+shh
 class MonteCarloMinimizationParallel
 {
 	static final boolean DEBUG=false;	//Flag

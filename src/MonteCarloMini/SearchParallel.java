@@ -6,7 +6,7 @@ import java.util.concurrent.RecursiveTask;
  * Searcher class that lands somewhere random on the surfaces and 
  * then moves downhill, stopping at the local minimum.
  */
-dd
+ddh
 public class SearchParallel extends RecursiveTask<int[]>{
 	private int id;				// Searcher identifier
 	private int pos_row, pos_col;		// Position in the grid
