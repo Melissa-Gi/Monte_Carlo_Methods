@@ -91,7 +91,7 @@ class MonteCarloMinimization{
     		terrain.print_heights();
     		terrain.print_visited();
     	}
-    	
+    		System.out.println("Serial Solution:");
 		System.out.printf("Run parameters\n");
 		System.out.printf("\t Rows: %d, Columns: %d\n", rows, columns);
 		System.out.printf("\t x: [%f, %f], y: [%f, %f]\n", xmin, xmax, ymin, ymax );

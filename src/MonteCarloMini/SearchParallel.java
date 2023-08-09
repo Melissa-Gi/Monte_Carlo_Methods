@@ -6,7 +6,7 @@ import java.util.concurrent.RecursiveTask;
  * Searcher class that lands somewhere random on the surfaces and 
  * then moves downhill, stopping at the local minimum.
  */
-ddh
+
 public class SearchParallel extends RecursiveTask<int[]>{
 	private int id;				// Searcher identifier
 	private int pos_row, pos_col;		// Position in the grid
@@ -17,7 +17,6 @@ public class SearchParallel extends RecursiveTask<int[]>{
 	static final int cutoff = 50000;
 	int lo;
 	int hi;
-	int[] ans;
 	static final boolean DEBUG=false;	//Flag
 
 	private TerrainArea terrain;
@@ -37,6 +36,7 @@ public class SearchParallel extends RecursiveTask<int[]>{
 		this.stopped = false;
 	}
 
+	//Constructor for compute to do calculation
 	public SearchParallel(SearchParallel[] arr,int l, int h)
 	{
 		this.arr = arr;
@@ -61,6 +61,7 @@ public class SearchParallel extends RecursiveTask<int[]>{
 					finder=i; //keep track of who found it
 				}
 				if(DEBUG) System.out.println("Search "+arr[i].getID()+" finished at  "+local_min + " in " +arr[i].getSteps());
+				//arr[i]=null;
 			}
 			int a []= {min,finder};
 			return a;
@@ -73,10 +74,14 @@ public class SearchParallel extends RecursiveTask<int[]>{
 			left.fork();
 			int[] rightAns = right.compute();
 			int[] leftAns = left.join();
-			if(rightAns[0]>leftAns[0])
+			if(rightAns[0]<leftAns[0])
+			{
 				return rightAns;
+			}
 			else
+			{
 				return leftAns;
+			}
 		}
 	}
 
