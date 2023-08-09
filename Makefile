@@ -11,7 +11,7 @@ BINDIR=bin
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 
-CLASSES= TerrainArea.class Search.class SearchParallel.class\
+CLASSES= TerrainArea.class SearchParallel.class\
 	Search$Direction.class SearchParallel$Direction.class\
 	MonteCarloMinimization.class MonteCarloMinimizationParallel.class 		
 	 
