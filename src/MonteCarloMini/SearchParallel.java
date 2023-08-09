@@ -1,11 +1,12 @@
 package MonteCarloMini;
 
-import java.util.concurrent.RecursiveTask;
 
 /* M. Kuttel 2023
  * Searcher class that lands somewhere random on the surfaces and 
  * then moves downhill, stopping at the local minimum.
  */
+
+import MonteCarloMini.TerrainArea.Direction;
 
 public class SearchParallel extends RecursiveTask<int[]>{
 	private int id;				// Searcher identifier
@@ -20,13 +21,6 @@ public class SearchParallel extends RecursiveTask<int[]>{
 	static final boolean DEBUG=false;	//Flag
 
 	private TerrainArea terrain;
-	enum Direction {
-		STAY_HERE,
-	    LEFT,
-	    RIGHT,
-	    UP,
-	    DOWN
-	  }
 
 	public SearchParallel(int id, int pos_row, int pos_col, TerrainArea terrain) {
 		this.id = id;

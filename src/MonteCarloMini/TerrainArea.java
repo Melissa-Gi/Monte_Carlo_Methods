@@ -2,8 +2,6 @@ package MonteCarloMini;
 
 import java.lang.Math.*;
 
-import MonteCarloMini.SearchParallel.Direction;
-
 public class TerrainArea {
 	
 	public static final int PRECISION = 10000;
@@ -14,7 +12,14 @@ public class TerrainArea {
 	private int [][] visit;
 	private int grid_points_visited;
 	private int grid_points_evaluated;
-    
+    	
+    	enum Direction {
+		STAY_HERE,
+	    LEFT,
+	    RIGHT,
+	    UP,
+	    DOWN
+	  }
 	
 	public TerrainArea(int rows, int columns, double xmin, double xmax, double ymin, double ymax) {
 		super();
