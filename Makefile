@@ -12,8 +12,8 @@ $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 
 CLASSES= TerrainArea.class SearchParallel.class\
-	Search$Direction.class SearchParallel$Direction.class\
-	MonteCarloMinimization.class MonteCarloMinimizationParallel.class 		
+	 MonteCarloMinimization.class\
+	 MonteCarloMinimizationParallel.class 		
 	 
 CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 
@@ -25,6 +25,6 @@ clean:
 run-serial: $(CLASS_FILES)
 	$(JAVA) -cp bin MonteCarloMini.MonteCarloMinimization 100 50 -30 60 -30 60 0.5
 
-run: $(CLASS_FILES)
+run-parallel: $(CLASS_FILES)
 	$(JAVA) -cp bin MonteCarloMini.MonteCarloMinimizationParallel 100 50 -30 60 -30 60 0.5
 	

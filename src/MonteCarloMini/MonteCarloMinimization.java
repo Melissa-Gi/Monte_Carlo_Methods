@@ -31,7 +31,7 @@ class MonteCarloMinimization{
     	double searches_density;	// Density - number of Monte Carlo  searches per grid position - usually less than 1!
 
      	int num_searches;		// Number of searches
-    	Search [] searches;		// Array of searches
+    	SearchParallel [] searches;		// Array of searches
     	Random rand = new Random();  //the random number generator
     	
     	if (args.length!=7) {  
@@ -58,9 +58,9 @@ class MonteCarloMinimization{
     	// Initialize 
     	terrain = new TerrainArea(rows, columns, xmin,xmax,ymin,ymax);
     	num_searches = (int)( rows * columns * searches_density );
-    	searches= new Search [num_searches];
+    	searches= new SearchParallel [num_searches];
     	for (int i=0;i<num_searches;i++) 
-    		searches[i]=new Search(i+1, rand.nextInt(rows),rand.nextInt(columns),terrain);
+    		searches[i]=new SearchParallel(i+1, rand.nextInt(rows),rand.nextInt(columns),terrain);
     	
       	if(DEBUG) {
     		/* Print initial values */
