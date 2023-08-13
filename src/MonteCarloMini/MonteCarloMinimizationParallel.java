@@ -1,3 +1,6 @@
+// Authour M. Kuttel 2023 EDITTED BY M. Githinji 2023
+//Test class which manages the searches and output's the results
+
 package MonteCarloMini;
 
 import java.util.Random;

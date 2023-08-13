@@ -1,7 +1,7 @@
 package MonteCarloMini;
 
 import java.util.concurrent.RecursiveTask;
-/* M. Kuttel 2023
+/* M. Kuttel 2023 EDITTED BY M. Githinji 2023
  * Searcher class that lands somewhere random on the surfaces and 
  * then moves downhill, stopping at the local minimum.
  */

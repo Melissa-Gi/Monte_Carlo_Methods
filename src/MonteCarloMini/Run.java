@@ -1,3 +1,5 @@
+//Test class purely for testing purposes
+
 package MonteCarloMini;
 
 import java.io.File;
