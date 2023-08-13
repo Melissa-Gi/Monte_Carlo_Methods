@@ -63,11 +63,11 @@ public class Run
 
             String [] newInitialConditions = {""+newX,""+newY,"0","500","0","500",""+param};
             //SearchParallel.cutoff = (int)param;
-            double tSerial = MonteCarloMinimization.main(newInitialConditions);
-            double tParallel = MonteCarloMinimizationParallel.main(newInitialConditions);
+            //double tSerial = MonteCarloMinimization.main(newInitialConditions);
+            //double tParallel = MonteCarloMinimizationParallel.main(newInitialConditions);
 
             x[count] = newX*newY;
-            y[count] = tSerial/tParallel;
+            //y[count] = tSerial/tParallel;
             
             count++;
         }
